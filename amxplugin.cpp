@@ -1,23 +1,8 @@
-//----------------------------------------------------------
-//
-//   SA-MP Multiplayer Modification For GTA:SA
-//   Copyright 2004-2009 SA-MP Team
-//
-//----------------------------------------------------------
-//
-// This provides an interface to call amx library functions
-// within samp-server.
-//
-//----------------------------------------------------------
-
 #include "amx/amx.h"
 #include "plugincommon.h"
 
-//----------------------------------------------------------
-
 void *pAMXFunctions;
 
-//----------------------------------------------------------
 
 typedef uint16_t *  AMXAPI (*amx_Align16_t)(uint16_t *v);
 uint16_t * AMXAPI amx_Align16(uint16_t *v)
@@ -328,6 +313,3 @@ int AMXAPI amx_UTF8Put(char *string, char **endptr, int maxchars, cell value)
 	amx_UTF8Put_t fn = ((amx_UTF8Put_t*)pAMXFunctions)[PLUGIN_AMX_EXPORT_UTF8Put];
 	return fn(string, endptr, maxchars, value);
 }
-
-//----------------------------------------------------------
-// EOF

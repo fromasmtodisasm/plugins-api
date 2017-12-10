@@ -1,11 +1,8 @@
 #ifndef _PLUGINCOMMON_H_INCLUDED
 #define _PLUGINCOMMON_H_INCLUDED
 
-//----------------------------------------------------------
-
 #define PLUGIN_VERSION 0x0220
 
-//----------------------------------------------------------
 
 #ifdef __cplusplus
   #define PLUGIN_EXTERN_C extern "C"
@@ -18,7 +15,7 @@
     #pragma message "Warning: Not using a GNU compiler."
   #endif
   #define PLUGIN_CALL 
-  #ifndef SAMPSVR
+  #ifndef RW_SRV
     // Compile code with -fvisibility=hidden to hide non-exported functions.
     #define PLUGIN_EXPORT PLUGIN_EXTERN_C __attribute__((visibility("default")))
   #else
@@ -34,7 +31,6 @@
   #error "You must define one of WIN32, LINUX or FREEBSD"
 #endif
 
-//----------------------------------------------------------
 
 enum SUPPORTS_FLAGS 
 {
@@ -44,7 +40,6 @@ enum SUPPORTS_FLAGS
 	SUPPORTS_PROCESS_TICK	= 0x20000,
 };
 
-//----------------------------------------------------------
 
 enum PLUGIN_DATA_TYPE
 {
@@ -58,7 +53,6 @@ enum PLUGIN_DATA_TYPE
 
 };
 
-//----------------------------------------------------------
 
 enum PLUGIN_AMX_EXPORT
 {
