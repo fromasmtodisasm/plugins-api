@@ -102,9 +102,4 @@ enum PLUGIN_AMX_EXPORT
 	PLUGIN_AMX_EXPORT_UTF8Put		= 43,
 };
 
-//----------------------------------------------------------
-
-#endif // _PLUGINCOMMON_H_INCLUDED
-
-//----------------------------------------------------------
-// EOF
+#endif 
