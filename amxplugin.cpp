@@ -1,3 +1,8 @@
+/*
+	San Andreas Multiplayer 2004-2009
+	Copyright SA-MP Team
+*/
+
 #include "amx/amx.h"
 #include "plugincommon.h"
 
